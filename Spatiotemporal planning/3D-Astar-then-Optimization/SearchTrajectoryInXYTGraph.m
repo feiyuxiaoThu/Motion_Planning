@@ -4,6 +4,8 @@ overall_obstacle_vector_run_once = cell(1,xyt_graph_search_.num_nodes_t);
 for ii = 1 : xyt_graph_search_.num_nodes_t
     x_obs = [];
     y_obs = [];
+    % delete the consideration of static obstacles but this must be added
+    % for full function
     %for jj = 1 : size(obstacle_vertexes_,2)
     %    for kk = 1 : (length(obstacle_vertexes_{1,jj}.x) - 1)
     %        x = linspace(obstacle_vertexes_{1,jj}.x(kk), obstacle_vertexes_{1,jj}.x(kk+1), 20);
@@ -16,7 +18,7 @@ for ii = 1 : xyt_graph_search_.num_nodes_t
         for kk = 1 : (length(dynamic_obs{1,jj}.x) - 1)
             x = linspace(dynamic_obs{ii,jj}.x(kk), dynamic_obs{ii,jj}.x(kk+1), 20);
             y = linspace(dynamic_obs{ii,jj}.y(kk), dynamic_obs{ii,jj}.y(kk+1), 20);
-            x_obs = [x_obs, x];
+            x_obs = [x_obs, x]; % fix this for actual problem becasue the dx and t can be fixed
             y_obs = [y_obs, y];
         end
     end

@@ -1,0 +1,13 @@
+reset;
+model QP.mod;
+option solver ipopt;
+solve;
+
+shell ("del" & ("x.txt"));
+shell ("del" & ("y.txt"));
+for {i in {1..Nw}}{
+    printf "%5.3f;\n", x[3*i-2]>>("x.txt");
+    printf "%5.3f;\n", y[3*i-2]>>("y.txt");
+}
+close ("x.txt");
+close ("y.txt");
