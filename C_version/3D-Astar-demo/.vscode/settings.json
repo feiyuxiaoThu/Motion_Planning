@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "globalsettings.h": "c"
+        "globalsettings.h": "c",
+        "iostream": "cpp"
     }
 }
