@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "GlobalSettings.h"
+#include "Astar.h"
 //#include "ConvertConfigToIndex.h"
 
 #define PI acos(-1)
@@ -95,46 +96,28 @@ int main(){
     Grid_3D start_ind = ConvertConfigToIndex(vehicle_TPBV_.x0, vehicle_TPBV_.y0, 0,environment_scale_,xyt_graph_search_);
     Grid_3D goal_ind = ConvertConfigToIndex(vehicle_TPBV_.xtf, vehicle_TPBV_.ytf, xyt_graph_search_.max_t,environment_scale_,xyt_graph_search_);
 
+    Vehicle_Traj Grid_res = SearchViaAStar(start_ind, goal_ind,xyt_graph_search_,environment_scale_,vehicle_TPBV_);
+
+    qp_real xx[Num_t_nodes_cons];
+    qp_real yy[Num_t_nodes_cons];
+
+    for (int i=0; i< Num_t_nodes_cons; i++){
+        xx[i] = environment_scale_.environment_x_min + (Grid_res.ind_vec[i][0] - 1) * xyt_graph_search_.resolution_x;
+
+        yy[i] = environment_scale_.environment_y_min + (Grid_res.ind_vec[i][1] - 1) * xyt_graph_search_.resolution_y;
+    }
+
 
     // print test
     
-    cout<< "goal_end" << goal_ind.x << goal_ind.y << goal_ind.t << endl;
+    //cout<< "goal_end" << goal_ind.x << goal_ind.y << goal_ind.t << endl;
+    //cout<< "start_end" << start_ind.x << start_ind.y << start_ind.t << endl;
+    for (int i=0; i< Num_t_nodes_cons; i++){
+        cout<<xx[i]<<endl;
+        cout<<yy[i]<<endl;
+    }
+    
 
     return 0;
 }
 
-Grid_3D ConvertConfigToIndex(qp_real x, qp_real y, qp_real t,Environment_Scale_ environment_scale_,XYT_Graph_Search_ xyt_graph_search_){
-    
-
-    qp_int ind1 = round((x - environment_scale_.environment_x_min) / xyt_graph_search_.resolution_x) + 1;
-
-    qp_int ind2 = round((y - environment_scale_.environment_y_min) / xyt_graph_search_.resolution_y) + 1;
-
-    qp_int ind3 = round(t / xyt_graph_search_.resolution_t) + 1;
-
-    if(ind1 < 1){
-        ind1 = 1;
-    }else if (ind1 > xyt_graph_search_.num_nodes_x)
-    {
-        ind1 = xyt_graph_search_.num_nodes_x;
-    }
-
-    if(ind2 < 1){
-        ind2 = 1;
-    }else if (ind2 > xyt_graph_search_.num_nodes_y)
-    {
-        ind2 = xyt_graph_search_.num_nodes_y;
-    }
-
-    if(ind3 < 1){
-        ind3 = 1;
-    }else if (ind3 > xyt_graph_search_.num_nodes_t)
-    {
-        ind3 = xyt_graph_search_.num_nodes_t;
-    }
-
-    Grid_3D out_ind = {ind1,ind2,ind3};
-    
-
-    return out_ind;
-}

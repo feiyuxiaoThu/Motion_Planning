@@ -1,7 +1,11 @@
+#pragma once
+
 #define qp_real double
 #define qp_int int
 #define Num_obs 4 // max 4 vehicles
 #define Num_t_nodes_cons 31
+#define Num_x_nodes_cons 56 // !!!
+#define Num_y_nodes_cons 6
 #define to_be_deter 0 // to be changed
 
 typedef struct{
@@ -62,6 +66,12 @@ typedef struct{
     qp_int t;
 }Grid_3D;
 
-//functions
+typedef struct{
+    qp_int ind_vec[Num_t_nodes_cons][3];
+    qp_real theta[Num_t_nodes_cons];
+    qp_real fitness;
+}Vehicle_Traj;
 
-//Grid_3D ConvertConfigToIndex(qp_real x, qp_real y, qp_real t);
+//functions
+Vehicle_Traj SearchViaAStar( Grid_3D start_ind, Grid_3D end_ind,XYT_Graph_Search_ xyt_graph_search_, Environment_Scale_ environment_scale_,Vehicle_TPBV_ vehicle_TPBV_);
+

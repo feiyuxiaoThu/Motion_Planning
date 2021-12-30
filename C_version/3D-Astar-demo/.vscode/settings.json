@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "globalsettings.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "cmath": "cpp"
     }
 }
