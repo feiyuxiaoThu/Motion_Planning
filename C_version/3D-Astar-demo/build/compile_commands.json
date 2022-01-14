@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/build",
+  "command": "/usr/bin/c++   -I/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/include    -g  -Wall -o2 -O3 -DNDEBUG   -o CMakeFiles/main.dir/main.cpp.o -c /home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/main.cpp",
+  "file": "/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/main.cpp"
+},
+{
+  "directory": "/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/build/src",
+  "command": "/usr/bin/c++   -I/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/../include    -g  -Wall -o2 -O3 -DNDEBUG   -o CMakeFiles/SRC.dir/Astarsearch.cpp.o -c /home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/Astarsearch.cpp",
+  "file": "/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/Astarsearch.cpp"
+},
+{
+  "directory": "/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/build/src",
+  "command": "/usr/bin/c++   -I/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/../include    -g  -Wall -o2 -O3 -DNDEBUG   -o CMakeFiles/SRC.dir/ConvertConfigToIndex.cpp.o -c /home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/ConvertConfigToIndex.cpp",
+  "file": "/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/ConvertConfigToIndex.cpp"
+}
+]

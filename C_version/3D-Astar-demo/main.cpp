@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
-#include "GlobalSettings.h"
+//#include "GlobalSettings.h"
 #include "Astar.h"
-//#include "ConvertConfigToIndex.h"
+
 
 #define PI acos(-1)
 
@@ -111,11 +111,7 @@ int main(){
     // print test
     
     //cout<< "goal_end" << goal_ind.x << goal_ind.y << goal_ind.t << endl;
-    //cout<< "start_end" << start_ind.x << start_ind.y << start_ind.t << endl;
-    for (int i=0; i< Num_t_nodes_cons; i++){
-        cout<<xx[i]<<endl;
-        cout<<yy[i]<<endl;
-    }
+    cout<< "start_end" << start_ind.x << start_ind.y << start_ind.t << endl;
     
 
     return 0;

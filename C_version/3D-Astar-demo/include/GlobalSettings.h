@@ -6,6 +6,7 @@
 #define Num_t_nodes_cons 31
 #define Num_x_nodes_cons 56 // !!!
 #define Num_y_nodes_cons 6
+#define MAX_NODE_COUNT (Num_t_nodes_cons*Num_x_nodes_cons*Num_y_nodes_cons)
 #define to_be_deter 0 // to be changed
 
 typedef struct{

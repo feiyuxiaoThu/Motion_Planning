@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Astar.h
+GlobalSettings.h
+../include/GlobalSettings.h
+
+../include/GlobalSettings.h
+
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/main.cpp
+stdio.h
+-
+math.h
+-
+Astar.h
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/Astar.h
+iostream
+-
+

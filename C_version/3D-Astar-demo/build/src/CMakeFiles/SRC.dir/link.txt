@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSRC.a  CMakeFiles/SRC.dir/Astarsearch.cpp.o CMakeFiles/SRC.dir/ConvertConfigToIndex.cpp.o
+/usr/bin/ranlib libSRC.a

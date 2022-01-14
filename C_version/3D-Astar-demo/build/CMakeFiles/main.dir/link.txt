@@ -1,0 +1,1 @@
+/usr/bin/c++    -g  -Wall -o2 -O3 -DNDEBUG  -rdynamic CMakeFiles/main.dir/main.cpp.o  -o main src/libSRC.a 

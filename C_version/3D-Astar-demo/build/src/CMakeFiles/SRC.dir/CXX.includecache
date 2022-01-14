@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/../include/Astar.h
+GlobalSettings.h
+../src/../include/GlobalSettings.h
+
+../src/../include/GlobalSettings.h
+
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/Astarsearch.cpp
+GlobalSettings.h
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/GlobalSettings.h
+Astar.h
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/Astar.h
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+stdbool.h
+-
+limits.h
+-
+
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/ConvertConfigToIndex.cpp
+GlobalSettings.h
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/GlobalSettings.h
+Astar.h
+/home/echo/Desktop/feiyu/Coding/feiyuxiaothu/Motion_Planning/C_version/3D-Astar-demo/src/Astar.h
+math.h
+-
+

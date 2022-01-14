@@ -28,4 +28,10 @@ typedef struct
 
 }Astar_Node;
 
-bool cmp(Astar_Node x, Astar_Node y); // for sort 
+bool point_eq(Grid_3D a, Grid_3D b);
+
+void add_to_open_set(Grid_3D p, int* open_set_count, Grid_3D *open_set);
+
+void remove_from_open_set(Grid_3D p, int* open_set_count, Grid_3D *open_set);
+
+Grid_3D get_point_with_lowest_f_score(int* open_set_count, Grid_3D *open_set,Astar_Node grid_space_3D[][Num_y_nodes_cons][Num_t_nodes_cons]);
